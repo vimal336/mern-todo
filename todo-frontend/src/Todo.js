@@ -11,7 +11,7 @@ export default function Todo() {
     const [editTitle, setEditTitle] = useState("");
     const [editDescription, setEditDescription] = useState("");
     
-    const apiUrl = "http://localhost:8000";
+    const apiUrl = "https://mern-todo-gold.vercel.app/";
     
     useEffect(() => {
         getItems();
