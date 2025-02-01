@@ -11,7 +11,7 @@ export default function Todo() {
     const [editTitle, setEditTitle] = useState("");
     const [editDescription, setEditDescription] = useState("");
     
-    const apiUrl = process.env.REACT_APP_API_URL;
+    const apiUrl = "http://localhost:8000";
     
     useEffect(() => {
         getItems();
