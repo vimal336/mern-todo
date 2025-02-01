@@ -12,13 +12,12 @@ app.use(cors())
 // let todos = [];
 
 // connecting mongodb
-mongoose.connect('mongodb://localhost:27017/mern-app')
-.then(() => {
-    console.log('DB Connected!')
+mongoose.connect('mongodb://127.0.0.1:27017/mern-app', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
-.catch((err) => {
-    console.log(err)
-})
+.then(() => console.log('DB Connected!'))
+.catch((err) => console.log('MongoDB connection error:', err));
 
 //creating schema
 const todoSchema = new mongoose.Schema({
